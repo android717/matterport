@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Matterport Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matterport 3D Viewer</title>
+    <script src="https://static.matterport.com/showcase-sdk/latest.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        #showcase {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
-<body style="margin:0;overflow:hidden">
-    <iframe
-        src="https://my.matterport.com/show/?m=MjvSM27iTEc"
-        width="100%"
-        height="100%"
-        frameborder="0"
-        allow="fullscreen; xr-spatial-tracking"
-    ></iframe>
+<body>
+    <iframe id="showcase"
+            allow="fullscreen; vr"
+            src="https://my.matterport.com/show/?m=MjvSM27iTEc&play=1"
+            frameborder="0">
+    </iframe>
 </body>
 </html>
